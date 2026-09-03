@@ -13,6 +13,7 @@
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:db": "docker compose -f compose.yaml up -d",
+    "db:seed": "bun src/database/seed.ts",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
     "lint": "oxlint src/ test/",

@@ -18,7 +18,7 @@ export class Order {
   @ManyToOne(() => Variant, (variant) => variant.id)
   variant: Variant;
 
-  @Column({ default: OrderStatus.PENDING })
+  @Column({ type: 'enum', enum: OrderStatus, default: OrderStatus.PENDING })
   status: OrderStatus;
 
   @Column({ type: 'timestamp', default: () => 'CURRENT_TIMESTAMP' })
