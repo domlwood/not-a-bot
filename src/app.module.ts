@@ -6,6 +6,9 @@ import { ProductsModule } from './products/products.module.js';
 import { VariantsModule } from './variants/variants.module.js';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { OrdersModule } from './orders/orders.module.js';
+import { QueueModule } from './queue/queue.module.js';
+import { AuthModule } from './auth/auth.module.js';
+
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -29,6 +32,8 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
     ProductsModule,
     VariantsModule,
     OrdersModule,
+    QueueModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
